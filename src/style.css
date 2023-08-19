@@ -43,3 +43,8 @@ li:nth-child(2n) {
     background: #f7f7f7;
 }
 
+li:hover span {
+    width: 40px;
+    transition: 0.2s linear;
+    opacity: 1;
+}
