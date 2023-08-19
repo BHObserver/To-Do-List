@@ -59,3 +59,9 @@ input {
     border: 3px solid rgba(0, 0, 0, 0);
 }
 
+input:focus {
+    background: white;
+    border: 3px solid #2980b9;
+    outline: none;
+}
+
