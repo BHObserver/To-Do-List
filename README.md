@@ -26,10 +26,10 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 BH-Observer Portfolio <a name="about-project"></a>
+# 📖 To Do List <a name="about-project"></a>
 
 
-**Portfolio** is a website that is used to showcase the projects and abilities.
+**To Do List** is a website that is used to make a list of daily activities.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -37,6 +37,7 @@
 <ul>
   <li>HTML5</li>
   <li>CSS3</li>
+  <li>ES6</li>
 </ul>
 
 ### Key Features <a name="key-features"></a>
@@ -48,8 +49,8 @@
 
 <!-- LIVE DEMO -->
 
-## 🚀 Live Demo <a name="live-demo"></a>
-- [Live Demo Link](https://bhobserver.github.io/projects/portfolio/index.html)
+<!-- ## 🚀 Live Demo <a name="live-demo"></a>
+- [Live Demo Link](https://bhobserver.github.io/projects/portfolio/index.html) -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -80,7 +81,7 @@ Example commands:
 ```sh
   cd my-folder
 
-  git clone https://github.com/BHObserver/my-portfolio.git
+  git clone https://github.com/BHObserver/
   
   cd Portfolio
 ```
