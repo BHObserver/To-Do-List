@@ -9,6 +9,9 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].js'
     },
+    devServer: {
+        static: './dist',
+    },
     plugins: [
         new HtmlWebpackPlugin ({
             title: 'To Do List',
@@ -23,5 +26,5 @@ module.exports = {
             use: ['style-loader', 'css-loader'],
           },
         ],
-      },
+    },
 }
