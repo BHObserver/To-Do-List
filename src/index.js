@@ -1,7 +1,6 @@
 import './style.css';
 
 const list = document.querySelector('ul');
-const span = document.querySelector('span');
 
 const todo = [
     {
@@ -38,14 +37,16 @@ todo.forEach( (item) => {
     list.appendChild(listItem);
 });
 
-window.addEventListener('load', () => {
+/* window.addEventListener('load', () => {
     const option = document.querySelectorAll('.fa-ellipsis-v');
+    const span = document.querySelectorAll('span');
     console.log(option);
     option.forEach( (element) => {
-        element.addEventListener('toggle', () => {
+        element.addEventListener('click', () => {
             element.style.display = 'none';
             span.style.display = 'inline-block';
+            element.parentElement.style.gridTemplateColumns = '20px 350px 10px';
             console.log('hoeljwoef')
         })
     });
-})
+}) */
