@@ -18,6 +18,16 @@ const todo = [
         completed: false,
         index: 3
     },
+    {
+        description: 'Cleaning',
+        completed: false,
+        index: 4
+    },
+    {
+        description: 'Bath',
+        completed: false,
+        index: 5
+    },
 ]
 
 todo.forEach( (item) => {
