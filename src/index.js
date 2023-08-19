@@ -3,51 +3,72 @@ import './style.css';
 const list = document.querySelector('ul');
 const input = document.querySelector('input');
 
-const tasks = [];
+const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+let savedHTML = localStorage.getItem('savedHTML') || '';
+
+function updateLocalStorage() {
+  localStorage.setItem('tasks', JSON.stringify(tasks));
+  localStorage.setItem('savedHTML', JSON.stringify(savedHTML));
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  list.innerHTML = JSON.parse(savedHTML);
+});
+
 class Task {
-    constructor (description, complete, index) {
-        this.description = description;
-        this.complete = complete;
-        this.index = index;
-    }
+  constructor(description, complete, index) {
+    this.description = description;
+    this.complete = complete;
+    this.index = index;
+  }
 }
 
 const addTask = () => {
-    const value = input.value;
-    tasks.push(new Task(value, false, tasks.length + 1))
-}
+  const { value } = input;
+  tasks.push(new Task(value, false, tasks.length + 1));
+};
+
+let currentIndex = tasks.length + 1;
 
 input.addEventListener('keypress', (event) => {
-    if(event.key === 'Enter') {
-        addTask();
-        
-        console.log('it worked', tasks);
-        const listItem = document.createElement('li');
-        listItem.innerHTML = `<input class="done" type="checkbox"> <input class='todo-item' type="text" value="${input.value}" />  <i class="fa fa-ellipsis-v" aria-hidden="true"></i> <span> <i class="fa fa-trash"></i> </span>`;
-        list.appendChild(listItem);
-        input.value = '';
-    }
-})
-
-
-
-
-/* tasks.forEach( (item) => {
+  if (event.key === 'Enter') {
+    addTask();
     const listItem = document.createElement('li');
-    listItem.innerHTML = `<input class="done" type="checkbox"> <h4 class='todo-item'> ${item.description} </h4>  <i class="fa fa-ellipsis-v" aria-hidden="true"></i> <span> <i class="fa fa-trash"></i> </span>`;
+    listItem.dataset.index = currentIndex;
+    listItem.innerHTML = `<input class="done" type="checkbox">
+            <input class='todo-item' type="text" value="${input.value}" />
+            <span><i class="fa fa-trash" aria-hidden="true"></i></span>`;
     list.appendChild(listItem);
-}); */
+    input.value = '';
+    currentIndex += 1;
 
-/* window.addEventListener('load', () => {
-    const option = document.querySelectorAll('.fa-ellipsis-v');
-    const span = document.querySelectorAll('span');
-    console.log(option);
-    option.forEach( (element) => {
-        element.addEventListener('click', () => {
-            element.style.display = 'none';
-            span.style.display = 'inline-block';
-            element.parentElement.style.gridTemplateColumns = '20px 350px 10px';
-            console.log('hoeljwoef')
-        })
-    });
-}) */
+    savedHTML += listItem.outerHTML;
+    updateLocalStorage();
+  }
+});
+
+list.addEventListener('click', (event) => {
+  const clickedElement = event.target;
+
+  if (clickedElement.classList.contains('fa-trash')) {
+    const parentElement = clickedElement.closest('li');
+    const index = parseInt(parentElement.dataset.index, 10);
+    parentElement.style.opacity = 0;
+    setTimeout(() => {
+      parentElement.remove();
+      tasks.splice(index - 1, 1);
+      savedHTML = list.innerHTML;
+      updateLocalStorage();
+    }, 500);
+  } else if (clickedElement.classList.contains('done')) {
+    const parentElement = clickedElement.closest('li');
+    const index = parseInt(parentElement.dataset.index, 10);
+    const todoItem = parentElement.querySelector('.todo-item');
+    if (todoItem) {
+      todoItem.style.textDecoration = clickedElement.checked ? 'line-through' : 'none';
+    }
+    tasks[index - 1].complete = clickedElement.checked;
+    updateLocalStorage();
+  }
+  event.stopPropagation();
+});
