@@ -32,3 +32,10 @@ ul {
     padding: 0;
 }
 
+li {
+    background: #fff;
+    height: 40px;
+    line-height: 40px;
+    color: #666
+}
+
