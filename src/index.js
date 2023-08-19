@@ -23,6 +23,5 @@ const todo = [
 todo.forEach((item) => {
   const listItem = document.createElement('li');
   listItem.innerHTML = `<input class="done" type="checkbox"> <h4 class='todo-item'> ${item.description} </h4>  <i class="fa fa-ellipsis-v" aria-hidden="true"></i> <span> <i class="fa fa-trash"></i> </span>`;
-  /* listItem.innerText = item.description; */
   list.appendChild(listItem);
 });
