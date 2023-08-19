@@ -1,6 +1,7 @@
 import './style.css';
 
 const list = document.querySelector('ul');
+const span = document.querySelector('span');
 
 const todo = [
     {
@@ -36,3 +37,15 @@ todo.forEach( (item) => {
     /* listItem.innerText = item.description; */
     list.appendChild(listItem);
 });
+
+window.addEventListener('load', () => {
+    const option = document.querySelectorAll('.fa-ellipsis-v');
+    console.log(option);
+    option.forEach( (element) => {
+        element.addEventListener('toggle', () => {
+            element.style.display = 'none';
+            span.style.display = 'inline-block';
+            console.log('hoeljwoef')
+        })
+    });
+})
