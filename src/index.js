@@ -1,41 +1,42 @@
 import './style.css';
 
 const list = document.querySelector('ul');
+const input = document.querySelector('input');
 
-const todo = [
-    {
-        description: 'Shopping',
-        completed: false,
-        index: 1
-    },
-    {
-        description: 'Breakfast',
-        completed: false,
-        index: 2
-    },
-    {
-        description: 'Exercise',
-        completed: false,
-        index: 3
-    },
-    {
-        description: 'Cleaning',
-        completed: false,
-        index: 4
-    },
-    {
-        description: 'Bath',
-        completed: false,
-        index: 5
-    },
-]
+const tasks = [];
+class Task {
+    constructor (description, complete, index) {
+        this.description = description;
+        this.complete = complete;
+        this.index = index;
+    }
+}
 
-todo.forEach( (item) => {
+const addTask = () => {
+    const value = input.value;
+    tasks.push(new Task(value, false, tasks.length + 1))
+}
+
+input.addEventListener('keypress', (event) => {
+    if(event.key === 'Enter') {
+        addTask();
+        
+        console.log('it worked', tasks);
+        const listItem = document.createElement('li');
+        listItem.innerHTML = `<input class="done" type="checkbox"> <input class='todo-item' type="text" value="${input.value}" />  <i class="fa fa-ellipsis-v" aria-hidden="true"></i> <span> <i class="fa fa-trash"></i> </span>`;
+        list.appendChild(listItem);
+        input.value = '';
+    }
+})
+
+
+
+
+/* tasks.forEach( (item) => {
     const listItem = document.createElement('li');
     listItem.innerHTML = `<input class="done" type="checkbox"> <h4 class='todo-item'> ${item.description} </h4>  <i class="fa fa-ellipsis-v" aria-hidden="true"></i> <span> <i class="fa fa-trash"></i> </span>`;
-    /* listItem.innerText = item.description; */
     list.appendChild(listItem);
-});
+}); */
 
 /* window.addEventListener('load', () => {
     const option = document.querySelectorAll('.fa-ellipsis-v');
