@@ -90,7 +90,7 @@ input:focus {
     font-size: 20px;
     letter-spacing: 1px;
     background: #f7f7f7;
-    color: gray;
+    color: rgb(93, 93, 93);
     border: none;
     outline: none;
 }
@@ -113,6 +113,12 @@ input:focus {
 
 .fa-ellipsis-v {
     line-height: unset;
+    color: rgb(154, 151, 151);
+}
+
+.fa-ellipsis-v:hover {
+    line-height: unset;
+    color: rgb(97, 96, 96);
 }
 
 * {
