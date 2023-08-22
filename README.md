@@ -26,8 +26,6 @@
 <!-- PROJECT DESCRIPTION -->
 
 ### 📖 To Do List <a name="about-project"></a>
-
-
 **To Do List** is a single page website that has features to make a to do list. It has add and remove feature to add a new activity and remove it.
 
 ### 🛠 Built With <a name="built-with"></a>
