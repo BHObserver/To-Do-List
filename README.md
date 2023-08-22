@@ -26,10 +26,10 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 To Do List <a name="about-project"></a>
+# 📖 BH-Observer Portfolio <a name="about-project"></a>
 
 
-**To Do List** is a website that is used to make a list of daily activities.
+**Portfolio** is a website that is used to showcase the projects and abilities.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -42,15 +42,15 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **Mobile First**
+- **Adds and Removes Tasks**
 - **Responsive**
-- **Navigation Bar**
-- **Contact Info**
+- **Dynamic**
+- **Local Stoarge**
 
 <!-- LIVE DEMO -->
 
-<!-- ## 🚀 Live Demo <a name="live-demo"></a>
-- [Live Demo Link](https://bhobserver.github.io/projects/portfolio/index.html) -->
+## 🚀 Live Demo <a name="live-demo"></a>
+- [Live Demo Link](https://bhobserver.github.io/projects/portfolio/index.html)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -81,7 +81,7 @@ Example commands:
 ```sh
   cd my-folder
 
-  git clone https://github.com/BHObserver/
+  git clone https://github.com/BHObserver/To-Do-List.git
   
   cd Portfolio
 ```
@@ -102,7 +102,8 @@ Example commands:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-**[Desktop Version Changes]**
+- **More Functionalities**
+- **Change UI Design**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -124,9 +125,9 @@ Contributions, issues, and feature requests are welcome!
 
 <!-- ACKNOWLEDGEMENTS -->
 
-I would like to say that, I am really greatful to the Microverse community.
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
+I would like to say that, I am really greatful to the Microverse community.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
