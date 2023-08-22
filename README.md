@@ -8,7 +8,6 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🤯 Project walkthrough](#walk-through)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -26,19 +25,20 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 BH-Observer Portfolio <a name="about-project"></a>
+### 📖 To Do List <a name="about-project"></a>
 
 
-**Portfolio** is a website that is used to showcase the projects and abilities.
+**To Do List** is a single page website that has features to make a to do list. It has add and remove feature to add a new activity and remove it.
 
-## 🛠 Built With <a name="built-with"></a>
-
-### Tech Stack <a name="tech-stack"></a>
+### 🛠 Built With <a name="built-with"></a>
 <ul>
   <li>HTML5</li>
   <li>CSS3</li>
   <li>ES6</li>
 </ul>
+
+### Tech Stack <a name="tech-stack"></a>
+**HTML5, CSS3, ES6**
 
 ### Key Features <a name="key-features"></a>
 
@@ -50,7 +50,7 @@
 <!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-- [Live Demo Link](https://bhobserver.github.io/projects/portfolio/index.)
+- [Live Demo Link](http://bh-observer.me/projects/todolist/dist/index.html)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -125,9 +125,9 @@ Contributions, issues, and feature requests are welcome!
 
 <!-- ACKNOWLEDGEMENTS -->
 
+I would like to say that, I am really greatful to the Microverse community.
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to say that, I am really greatful to the Microverse community.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
