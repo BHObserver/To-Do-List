@@ -1,4 +1,4 @@
-import './style.css';
+/* import './style.css';
 
 const list = document.querySelector('ul');
 const input = document.querySelector('input');
@@ -8,11 +8,11 @@ let savedHTML = localStorage.getItem('savedHTML') || '';
 
 function updateLocalStorage() {
   localStorage.setItem('tasks', JSON.stringify(tasks));
-  localStorage.setItem('savedHTML', JSON.stringify(savedHTML));
+  localStorage.setItem('savedHTML', savedHTML);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  list.innerHTML = JSON.parse(savedHTML);
+  list.innerHTML = savedHTML;
 });
 
 class Task {
@@ -72,3 +72,4 @@ list.addEventListener('click', (event) => {
   }
   event.stopPropagation();
 });
+ */
