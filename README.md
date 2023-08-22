@@ -37,14 +37,15 @@
 <ul>
   <li>HTML5</li>
   <li>CSS3</li>
+  <li>ES6</li>
 </ul>
 
 ### Key Features <a name="key-features"></a>
 
-- **Mobile First**
+- **Adds and Removes Tasks**
 - **Responsive**
-- **Navigation Bar**
-- **Contact Info**
+- **Dynamic**
+- **Local Stoarge**
 
 <!-- LIVE DEMO -->
 
@@ -80,7 +81,7 @@ Example commands:
 ```sh
   cd my-folder
 
-  git clone https://github.com/BHObserver/my-portfolio.git
+  git clone https://github.com/BHObserver/To-Do-List.git
   
   cd Portfolio
 ```
@@ -101,7 +102,8 @@ Example commands:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-**[Desktop Version Changes]**
+- **More Functionalities**
+- **Change UI Design**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
