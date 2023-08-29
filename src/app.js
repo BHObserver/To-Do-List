@@ -1,17 +1,18 @@
 // app.js
 import './style.css';
 import isValidInput from './inputValidation';
-import Task from './task';
 import updateLocalStorage from './localStorage';
 import { updateStatus, clearCompletedTasks } from './statusUpdates';
 import updateIndex from './updateIndex';
+import removeTask from './removeTask';
+import addTask from './addTask';
 
 export default function initApp() {
   const list = document.querySelector('ul');
   const input = document.querySelector('input');
   const clearCompletedButton = document.querySelector('.clear-completed');
 
-  const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+  let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
   let savedHTML = localStorage.getItem('savedHTML') || '';
 
   document.addEventListener('DOMContentLoaded', () => {
@@ -23,15 +24,16 @@ export default function initApp() {
 
     if (clickedElement.classList.contains('fa-trash')) {
       const parentElement = clickedElement.closest('li');
-      const index = parseInt(parentElement.dataset.index, 10);
+      const newTasks = removeTask(parentElement, tasks);
+      tasks = newTasks;
       parentElement.style.opacity = 0;
       setTimeout(() => {
         parentElement.remove();
-        tasks.splice(index - 1, 1);
         savedHTML = list.innerHTML;
         updateLocalStorage(tasks, savedHTML);
         updateIndex();
       }, 500);
+      /* removeTask(parentElement, tasks, savedHTML, list, updateLocalStorage, updateIndex); */
     } else if (clickedElement.classList.contains('done')) {
       const parentElement = clickedElement.closest('li');
       const index = parseInt(parentElement.dataset.index, 10);
@@ -48,11 +50,6 @@ export default function initApp() {
 
   list.addEventListener('click', handleListClick);
 
-  function addTask() {
-    const { value } = input;
-    tasks.push(new Task(value, false, tasks.length + 1));
-  }
-
   function createListItem(value) {
     const listItem = document.createElement('li');
     listItem.innerHTML = `<input class="done" type="checkbox">
@@ -66,7 +63,9 @@ export default function initApp() {
       const { value } = input;
 
       if (isValidInput(value)) {
-        addTask();
+        const newTasks = addTask(value, tasks);
+        tasks = newTasks;
+        addTask(value, tasks);
         const listItem = createListItem(value);
         list.appendChild(listItem);
         input.value = '';
