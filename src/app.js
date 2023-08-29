@@ -62,7 +62,9 @@ export default function initApp() {
       const { value } = input;
 
       if (isValidInput(value)) {
-        
+        const newTasks = addTask(value, tasks);
+        tasks = newTasks;
+        addTask(value, tasks);
         const listItem = createListItem(value);
         list.appendChild(listItem);
         input.value = '';
