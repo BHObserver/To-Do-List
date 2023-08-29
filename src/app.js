@@ -33,7 +33,6 @@ export default function initApp() {
         updateLocalStorage(tasks, savedHTML);
         updateIndex();
       }, 500);
-      /* removeTask(parentElement, tasks, savedHTML, list, updateLocalStorage, updateIndex); */
     } else if (clickedElement.classList.contains('done')) {
       const parentElement = clickedElement.closest('li');
       const index = parseInt(parentElement.dataset.index, 10);
@@ -63,9 +62,7 @@ export default function initApp() {
       const { value } = input;
 
       if (isValidInput(value)) {
-        const newTasks = addTask(value, tasks);
-        tasks = newTasks;
-        addTask(value, tasks);
+        
         const listItem = createListItem(value);
         list.appendChild(listItem);
         input.value = '';
