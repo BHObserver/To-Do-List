@@ -3,7 +3,7 @@
     "build": "webpack",
     "watch": "webpack --watch",
     "start": "webpack-dev-server --open",
-    "test": "jest --require esm"
+    "test": "jest"
   },
   "devDependencies": {
     "@babel/core": "^7.22.11",
