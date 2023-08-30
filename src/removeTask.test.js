@@ -1,5 +1,5 @@
-import removeTask from './removeTask';
-import Task from './task';
+import removeTask from './removeTask.js';
+import Task from './task.js';
 
 describe('removeTask function', () => {
   it('should remove a task from the tasks array', () => {
