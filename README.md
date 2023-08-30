@@ -103,6 +103,12 @@ Example commands:
 
 - GitHub: [@bhobserver](https://github.com/bhobserver)
 
+👤 **Enoh Collins**
+
+- GitHub: [@githubhandle](https://github.com/enocol)
+- Twitter: [@twitterhandle](https://mobile.twitter.com/enocol)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/mwlite/in/enocol)
+
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
