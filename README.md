@@ -1,7 +1,5 @@
 <a name="readme-top"></a>
 
-<!-- TABLE OF CONTENTS -->
-
 # 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
@@ -25,8 +23,6 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-<!-- PROJECT DESCRIPTION -->
-
 # 📖 BH-Observer Portfolio <a name="about-project"></a>
 
 **Portfolio** is a website that is used to showcase the projects and abilities.
@@ -48,15 +44,11 @@
 - **Dynamic**
 - **Local Stoarge**
 
-<!-- LIVE DEMO -->
-
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 - [Live Demo Link](https://bhobserver.github.io/projects/portfolio/index.html)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -89,8 +81,6 @@ Example commands:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- AUTHORS -->
-
 ## 👥 Author <a name="authors"></a>
 
 👤 **Obote**
@@ -109,8 +99,6 @@ Example commands:
 - Twitter: [@twitterhandle](https://mobile.twitter.com/enocol)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/mwlite/in/enocol)
 
-<!-- FUTURE FEATURES -->
-
 ## 🔭 Future Features <a name="future-features"></a>
 
 - **More Functionalities**
@@ -118,15 +106,11 @@ Example commands:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- CONTRIBUTING -->
-
 ## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- SUPPORT -->
 
 ## ⭐️ Show your support <a name="support"></a>
 
@@ -134,15 +118,11 @@ Give a ⭐️ if you like this project!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- ACKNOWLEDGEMENTS -->
-
 I would like to say that, I am really greatful to the Microverse community.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
 
