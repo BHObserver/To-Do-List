@@ -6,6 +6,7 @@ import { updateStatus, clearCompletedTasks } from './statusUpdates';
 import updateIndex from './updateIndex';
 import removeTask from './removeTask';
 import addTask from './addTask';
+import handleUpdateDescription from './updateDescription';
 
 export default function initApp() {
   const list = document.querySelector('ul');
@@ -42,7 +43,9 @@ export default function initApp() {
         todoItem.style.color = clickedElement.checked ? 'gray' : 'black';
       }
       tasks[index - 1].complete = clickedElement.checked;
-      updateStatus(index - 1, clickedElement.checked);
+      const newTasks = updateStatus(tasks, savedHTML, index - 1, clickedElement.checked);
+      tasks = newTasks;
+      updateLocalStorage(newTasks, savedHTML);
     }
     event.stopPropagation();
   }
@@ -78,35 +81,36 @@ export default function initApp() {
   }
   input.addEventListener('keypress', handleInputKeyPress);
 
-  function handleUpdateDescription(event) {
-    const clickedElement = event.target;
+  list.addEventListener('keypress', (event) => {
     if (event.key === 'Enter') {
-      const updatedDescription = clickedElement.value;
+      const clickedElement = event.target;
       const parentElement = clickedElement.closest('li');
+      const updatedDescription = clickedElement.value;
       const targetInput = parentElement.querySelector('.todo-item');
-      const index = parseInt(parentElement.dataset.index, 10);
-      tasks[index - 1].description = updatedDescription;
+      handleUpdateDescription(event, tasks, parentElement);
       targetInput.setAttribute('value', updatedDescription);
-      savedHTML = list.innerHTML;
       updateLocalStorage(tasks, savedHTML);
+      updateIndex();
     }
-  }
-
-  list.addEventListener('keypress', handleUpdateDescription);
+  });
 
   function handleClearCompleted() {
     const completedTasks = list.querySelectorAll('.done:checked');
+    const tasksCopy = tasks.slice(); // Create a copy of tasks array
+    const { newTasks, savedHTML: updatedSavedHTML } = clearCompletedTasks(tasksCopy, savedHTML);
+    tasks = newTasks; // Update tasks reference to the newTasks array
+
     completedTasks.forEach((task) => {
       const parentElement = task.closest('li');
-      const index = parseInt(parentElement.dataset.index, 10);
+      /* const index = parseInt(parentElement.dataset.index, 10); */
       parentElement.remove();
-      tasks.splice(index - 1, 1);
-      savedHTML = list.innerHTML;
-      updateLocalStorage(tasks, savedHTML);
-      updateIndex();
     });
 
-    clearCompletedTasks();
+    savedHTML = updatedSavedHTML; // Update savedHTML with the updated value
+    updateLocalStorage(tasks, savedHTML);
+    updateIndex();
+
+    clearCompletedTasks(tasks, savedHTML);
   }
   clearCompletedButton.addEventListener('click', handleClearCompleted);
 }
