@@ -12,7 +12,6 @@ describe('handleUpdateDescription', () => {
     expect(result.tasks[0].description).toBe('New description');
     expect(result.tasks[1].description).toBe('Task 2');
   });
-
 });
 
 describe('updateStatus', () => {
@@ -27,7 +26,6 @@ describe('updateStatus', () => {
     expect(result[0].complete).toBe(true);
     expect(result[1].complete).toBe(true);
   });
-
 });
 
 describe('clearCompletedTasks', () => {
