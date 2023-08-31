@@ -25,8 +25,7 @@
 
 # 📖 To-D0 List <a name="about-project"></a>
 
-**To-do list** is a website that is used to showcase the projects and abilities.
-
+**To-do list** is a single page website that has the the functionalities to make a list of the daily activities.
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
@@ -44,11 +43,6 @@
 - **Dynamic**
 - **Local Stoarge**
 
-## 🚀 Live Demo <a name="live-demo"></a>
-
-- [Live Demo Link](https://bhobserver.github.io/projects/portfolio/index.html)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
