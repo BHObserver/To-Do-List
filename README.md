@@ -23,9 +23,9 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-# 📖 BH-Observer Portfolio <a name="about-project"></a>
+# 📖 To-D0 List <a name="about-project"></a>
 
-**Portfolio** is a website that is used to showcase the projects and abilities.
+**To-do list** is a website that is used to showcase the projects and abilities.
 
 ## 🛠 Built With <a name="built-with"></a>
 
