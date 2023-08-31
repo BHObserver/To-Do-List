@@ -1,8 +1,4 @@
-export default function handleUpdateDescription(
-  event,
-  tasks,
-  parentElement,
-) {
+const handleUpdateDescription = (event, tasks, parentElement) => {
   const clickedElement = event.target;
   let updatedTasks = [...tasks];
   if (event.key === 'Enter') {
@@ -13,4 +9,6 @@ export default function handleUpdateDescription(
   }
 
   return { tasks: updatedTasks };
-}
+};
+
+export default handleUpdateDescription;
