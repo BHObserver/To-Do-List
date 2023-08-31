@@ -6,7 +6,12 @@ const updateStatus = (tasks, index, completed) => {
   return newTasks;
 };
 
-export function clearCompletedTasks(tasks, savedHTML) {
+const clearCompletedTasks = (tasks, savedHTML) => {
   const newTasks = tasks.filter((task) => !task.complete);
   return { newTasks, savedHTML };
-}
+};
+
+export default {
+  updateStatus,
+  clearCompletedTasks,
+};
