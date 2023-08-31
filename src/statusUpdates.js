@@ -1,19 +1,12 @@
-import updateLocalStorage from './localStorage';
-
-// statusUpdates.js
-export function updateStatus(index, completed) {
-  const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
-  const savedHTML = localStorage.getItem('savedHTML') || '';
-
-  if (index >= 0 && index < tasks.length) {
-    tasks[index].complete = completed;
-    updateLocalStorage(tasks, savedHTML);
+export const updateStatus = (tasks, index, completed) => {
+  const newTasks = [...tasks]; // Create a copy of tasks array
+  if (index >= 0 && index < newTasks.length) {
+    newTasks[index].complete = completed;
   }
-}
+  return newTasks;
+};
 
-export function clearCompletedTasks() {
-  const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
-  const savedHTML = localStorage.getItem('savedHTML') || '';
+export const clearCompletedTasks = (tasks, savedHTML) => {
   const newTasks = tasks.filter((task) => !task.complete);
-  updateLocalStorage(newTasks, savedHTML);
-}
+  return { newTasks, savedHTML };
+};
