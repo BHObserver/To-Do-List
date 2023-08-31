@@ -1,4 +1,4 @@
 node_modules/
-src/removeTask.test.js
-src/addTask.test.js
+src/
+
 .vscode/settings.json
