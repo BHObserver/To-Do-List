@@ -1,4 +1,4 @@
-/* import addTask from './addTask';
+import addTask from './addTask';
 import Task from './task';
 
 describe('addTask function', () => {
@@ -11,4 +11,3 @@ describe('addTask function', () => {
     expect(newTasks[newTasks.length - 1].description).toBe(value);
   });
 });
- */
